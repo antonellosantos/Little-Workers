@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dashboard</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <style>
+      body{
+            background-color: #579DC5;
+        }
+
+      .container{
+            position: absolute;
+            display: flex;
+            left: 5%;
+            justify-content: center;
+            background-color: white;
+            border-radius: 10px;
+            height: 94%;
+            width: 90%;
+            right: 20%;
+            text-align: center;
+            top: 30px;
+            border-radius: 15px;
+        }
+      #selectingSubject{
+        position: absolute;
+            top: 14%;
+            display: block;
+            width: 10%;
+            left: 110px;
+            padding: 10px 15px;
+            border: 0;
+            background:black;
+            color:white;
+            border-radius: 5px;
+            margin: 5px 0;
+            font-size: 20px;
+      }
+      .profilePicture{
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          background-color: black;
+          height: 80px;
+          width: 80px;
+          right: 110px;
+          text-align: center;
+          top: 12%;
+          border-radius: 50px;          
+        }
+
+        .task{
+            position: absolute;
+            display: flex;
+            left: 5%;
+            justify-content: center;
+            background-color: grey;
+            border-radius: 10px;
+            height: 24%;
+            width: 90%;
+            right: 20%;
+            text-align: center;
+            top: 30%;
+            border-radius: 15px;
+        }
+        #post_title{
+          position: absolute;
+          display: flex;
+          left: 10%;
+          color: black;
+        }
+
+        #task_details{
+          position: absolute;
+          display: flex;
+          left: 10%;
+          top: 30%;
+          color: black;
+        }
+
+        .poster_picture{
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          background-color: black;
+          height: 80px;
+          width: 80px;
+          left: 40px;
+          text-align: center;
+          top: 30%;
+          border-radius: 50px;          
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+  <a href="/profile"><div class="profilePicture"></div></a>
+    <select name="Subject" id="selectingSubject">
+              <option value="math">Math</option>
+              <option value="english">English</option>
+              <option value="science">Science</option>
+    </select>
+    <div class="task">
+      <div class="poster_picture"></div>
+      <a href="/taskPage"><h1 id="post_title">CCSCAL2 HELP</h1></a>
+      <h4 id="task_details">Homework due Thursday and I need help figuring out how to do the homework, either meet up or comment with attached picture of the homework</h4>
+    </div>
+    
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</body>
+</html>

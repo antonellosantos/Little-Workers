@@ -1,2 +1,1 @@
-# Little Workers
- WEBAPDE Phase 2
+# LittleWorkers

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Profile Page!</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <style>
+        #recently{
+          position: absolute;
+          display: flex;
+          right: 30%;
+          top: 5%;
+        }
+
+        .profileDetails{
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          background-color: black;
+          height: 200px;
+          width: 200px;
+          left: 15%;
+          text-align: center;
+          top: 150px;
+          border-radius: 50px;          
+        }
+
+        #profileName{
+          position: absolute;
+          display: flex;
+          left: 13.5%;
+          top: 40%;
+          font-size: 4rem;
+        }
+
+        #profileEdit{
+          position: absolute;
+          display: flex;
+          top: 60%;
+          left: 300px;    
+          width: 10%;    
+          height: 5%;
+          border-radius: 10px;
+          font-size: 20px;
+          text-align: middle;
+        }
+    </style>
+</head>
+<body>
+  <h2 id="recently">Recently Contributed Comments</h2>
+  <div class="profileDetails"> <!--picture-->
+     
+     
+  </div>
+  <label id="profileName">William Reyes</label>
+  <a href="/editProfile"><button type="button" id="profileEdit" class="btn btn-primary">Edit Profile</button></a>
+
+  <div class="recentComments">
+
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</body>
+</html>

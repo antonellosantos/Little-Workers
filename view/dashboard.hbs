@@ -38,6 +38,9 @@
                 post.push(addObj);
                 render(addObj);
                 
+                $('#title').val('');
+                $('#text').val('');
+                $('#subject').val('');
                 
             });
             
@@ -107,7 +110,7 @@
 
             Title: <input type="text" id="title">
             Text: <input type="text" id="text">
-            Subject:<input type="text" id="text">
+            Subject:<input type="text" id="subject">
 
             <button id='addTo' class="btn btn-lg btn-primary btn-block" type="button">ADD</button>
         </div>

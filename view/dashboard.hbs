@@ -8,110 +8,64 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/css/dashboard.css">
     
-    <style>
-      body{
-            background-color: #579DC5;
-        }
-
-      .container{
-            position: absolute;
-            display: flex;
-            left: 5%;
-            justify-content: center;
-            background-color: white;
-            border-radius: 10px;
-            height: 94%;
-            width: 90%;
-            right: 20%;
-            text-align: center;
-            top: 30px;
-            border-radius: 15px;
-        }
-      #selectingSubject{
-        position: absolute;
-            top: 14%;
-            display: block;
-            width: 10%;
-            left: 110px;
-            padding: 10px 15px;
-            border: 0;
-            background:black;
-            color:white;
-            border-radius: 5px;
-            margin: 5px 0;
-            font-size: 20px;
-      }
-      .profilePicture{
-          position: absolute;
-          display: flex;
-          justify-content: center;
-          background-color: black;
-          height: 80px;
-          width: 80px;
-          right: 110px;
-          text-align: center;
-          top: 12%;
-          border-radius: 50px;          
-        }
-
-        .task{
-            position: absolute;
-            display: flex;
-            left: 5%;
-            justify-content: center;
-            background-color: grey;
-            border-radius: 10px;
-            height: 24%;
-            width: 90%;
-            right: 20%;
-            text-align: center;
-            top: 30%;
-            border-radius: 15px;
-        }
-        #post_title{
-          position: absolute;
-          display: flex;
-          left: 10%;
-          color: black;
-        }
-
-        #task_details{
-          position: absolute;
-          display: flex;
-          left: 10%;
-          top: 30%;
-          color: black;
-        }
-
-        .poster_picture{
-          position: absolute;
-          display: flex;
-          justify-content: center;
-          background-color: black;
-          height: 80px;
-          width: 80px;
-          left: 40px;
-          text-align: center;
-          top: 30%;
-          border-radius: 50px;          
-        }
-    </style>
 </head>
 <body>
-<div class="container">
-  <a href="/profile"><div class="profilePicture"></div></a>
-    <select name="Subject" id="selectingSubject">
-              <option value="math">Math</option>
-              <option value="english">English</option>
-              <option value="science">Science</option>
-    </select>
-    <div class="task">
-      <div class="poster_picture"></div>
-      <a href="/taskPage"><h1 id="post_title">CCSCAL2 HELP</h1></a>
-      <h4 id="task_details">Homework due Thursday and I need help figuring out how to do the homework, either meet up or comment with attached picture of the homework</h4>
+  <header class = "masthead">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+        <li>
+            <img src="/img/logo.png" class = "damien" alt="Damien the Little Worker">
+        </li>
+          <li class="active"><a href="/dashboard"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+          <li><a href="/profile"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+        </ul>
+  
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+        </ul>
+         
+      
+
+      </div>
     </div>
-    
+  </nav>
+
+<div class="container-fluid text-center" style="margin-top:50px;">    
+  <div class="row content">
+    <div class="bg col-sm-2 sidenav">
+    </div>
+    <div class="col-md-8 text-left"> 
+      <h1>Dashboard</h1>
+       <hr  style="height:1px;border:none;color:#333;background-color:#333;">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <hr>
+      
+    </div>
+    <div class="bg col-sm-2 sidenav">
+    </div>
+  </div>
+    <div class="row content">
+    <div class="bg col-sm-2 sidenav">
+    </div>
+    <div class="col-md-8 text-left"> 
+      
+    </div>
+    <div class="bg col-sm-2 sidenav">
+    </div>
+  </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

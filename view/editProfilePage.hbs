@@ -15,6 +15,26 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
   <link rel="stylesheet" href="/css/editprofile.css">
 
+    <script>
+        
+        $(document).ready(function(){
+           
+            
+            
+            $('#editPro').click(function(err){
+                var element = document.getElementById('profName');
+                element.innerHTML =$('#changeName').val();
+                
+                $('#changeName').val('');
+                $('#changePass').val('');
+                $('#confChangePass').val('');
+            });
+            
+            
+        });
+    </script>
+    
+
 </head>
 <body>
 <header class = "masthead">
@@ -58,7 +78,7 @@
 				<!-- END SIDEBAR USERPIC -->
 				<!-- SIDEBAR USER TITLE -->
 				<div class="profile-usertitle">
-					<div class="profile-usertitle-name">
+					<div class="profile-usertitle-name" id="profName">
 						William Reyes
 					</div>
 					<div class="profile-usertitle-job">
@@ -115,10 +135,10 @@
                 <h3 class="heading">My Profile</h3>
                 <div class="form">
                 <form action="" method="" id="contactFrm" name="contactFrm">
-                    <input type="text" required="" placeholder="Name" value="" name="name" class="txt">
-                    <input type="password" required="" placeholder="Change Password" value="" name="password" class="txt"><br>
-                    <input type="password" required="" placeholder="Confirm Change Password" value="" name="password" class="txt"><br>
-                    <button type="button" class="btn btn-primary">Update</button>
+                    <input type="text" required="" placeholder="Name" value="" name="name" class="txt" id="changeName">
+                    <input type="password" required="" placeholder="Change Password" value="" name="password" class="txt" id="changePass"><br>
+                    <input type="password" required="" placeholder="Confirm Change Password" value="" name="password" class="txt" id="confChangePass"><br>
+                    <button type="button" class="btn btn-primary" id="editPro">Update</button>
                 </form>
             </div>
             </div>

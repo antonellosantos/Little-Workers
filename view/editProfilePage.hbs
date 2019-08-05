@@ -8,48 +8,99 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    
-    <style>
-        body{
-            background-color: #579DC5;
-        }
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+  <link rel="stylesheet" href="/css/editprofile.css">
 
-        .container{
-            position: absolute;
-            display: flex;
-            margin-left: 33%;
-            justify-content: center;
-            background-color: white;
-            border-radius: 10px;
-            height: 90%;
-            width: 60%;
-            right: 20%;
-            text-align: center;
-            top: 50px;
-            border-radius: 15px;
-        }
-
-        #newPassword{
-          position: absolute;
-          display: flex;
-          top: 40%;
-          left: 43%
-        }
-
-        #submit{
-          position: absolute;
-          display: flex;
-          top: 50%;
-          left: 45%;
-        }
-    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>What Do You Want Your New Password To Be?</h1>
-    <input type="password" placeholder="New Password" id="newPassword">
-  </div>
-  <a href="/profile"><button type="button" id="submit" class="btn btn-primary">Submit</button></a>
+<div class="container">
+    <div class="row profile">
+		<div class="col-md-3">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+					<img src="/img/Reese.jpg" class="avatar" alt="">
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						William Reyes
+					</div>
+					<div class="profile-usertitle-job">
+						
+					</div>
+				</div>
+				<div class="profile-usermenu">
+					<ul class="nav">
+						<li class="active">
+							<a href="#">
+							<i class="glyphicon glyphicon-home"></i>
+							Overview </a>
+						</li>
+						<li>
+							<a href="/profile">
+							<i class="glyphicon glyphicon-user"></i>
+							 Profile </a>
+						</li>
+						<li>
+							<a href="#" target="#">
+							<i class="glyphicon glyphicon-ok"></i>
+							Tasks </a>
+						</li>
+					</ul>
+				</div>
+				<!-- END MENU -->
+			   
+           <div class="portlet light bordered">
+                                                <!-- STAT -->
+                                                <div class="row list-separated profile-stat">
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
+                                                        <div class="num uppercase profile-stat-title"> 37 </div>
+                                                        <div class="uppercase profile-stat-text"> Projects </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
+                                                        <div class="num uppercase profile-stat-title"> 51 </div>
+                                                        <div class="uppercase profile-stat-text"> Tasks </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
+                                                        <div class="num uppercase profile-stat-title"> 61 </div>
+                                                        <div class="uppercase profile-stat-text"> Uploads </div>
+                                                    </div>
+                                                </div>
+                                                <!-- END STAT -->
+                                          </div>                   
+                                           
+        
+        
+			</div>
+		</div>
+		<div class="col-md-9 order-content">
+          
+		<div class="form_main col-md-4 col-sm-5 col-xs-7">
+                <h3 class="heading">My Profile</h3>
+                <div class="form">
+                <form action="" method="" id="contactFrm" name="contactFrm">
+                    <input type="text" required="" placeholder="Name" value="" name="name" class="txt">
+                    <input type="password" required="" placeholder="Change Password" value="" name="password" class="txt"><br>
+                    <input type="password" required="" placeholder="Confirm Change Password" value="" name="password" class="txt"><br>
+                    <button type="button" class="btn btn-primary">Update</button>
+                </form>
+            </div>
+            </div>
+            
+	</div>
+		
+		
+	</div>
+</div>
+<script type = "text/javascript">
+$(".num").counterUp({delay:10,time:1250});
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </body>

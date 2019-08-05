@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Exo:700&display=swap');
 
-body {
-    background-color: white;
-}
 
 .wrap-login {
     padding:20px;
@@ -44,7 +41,7 @@ body {
 	  background-position: center;
 	  background-repeat: no-repeat;
 	  background-size: cover;
-	  background: 
+ 
 }
 
 .wrapper {	

@@ -41,7 +41,14 @@
             <li><a href="/"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
         </ul>
          
-      
+      <style>
+        .addToDash{
+            padding: 1%;
+            width: 96;
+            border: 1px solid #000;
+        }
+
+    </style>
 
       </div>
     </div>
@@ -72,9 +79,12 @@
 							Overview </a>
 						</li>
 						<li>
-							<a href="/editProfile">
+              <form action="editingProfile" method="post" id="editProfile" style="margin-left: 15px; margin-top:5px;margin-bottom: 5px;">
+              <a href="/editProfile">
 							<i class="glyphicon glyphicon-user"></i>
 							Edit Profile </a>
+              </form>
+							
 						</li>
 						<li>
 							<a href="#" target="#">
@@ -112,6 +122,12 @@
             <div class="profile-content">
 			   <h3 class="heading">My Works</h3>
                <hr  style="height:1px;border:none;color:#333;background-color:#333;">
+                
+                <div class="addToDash">
+                    <a href="/taskPage"><h1 id="post_title">CCSCAL2 HELP</h1></a>
+                    <h4 id="task_details">Homework due Thursday and I need help figuring out how to do the homework, either meet up or comment with attached picture of the homework</h4>
+                </div>
+                
             </div>
 		</div>
 	</div>

@@ -10,6 +10,60 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="/css/dashboard.css">
+    <script>
+        function render(data){
+            var html = `<div class="addToDash">
+      <a href="/taskPage"><h1 id="post_title">${data.title}</h1></a>
+      <h4 id="task_details">${data.text}</h4>
+    </div>`
+
+            $('#container').append(html);
+        }
+        
+        $(document).ready(function(){
+           
+            var post = [];
+            
+            for(var i=0; i<post.length; i++){
+                render(post[i]);
+            }
+            
+            $('#addTo').click(function(err){
+                
+               var addObj ={
+                   "title": $('#title').val(),
+                   "text": $('#text').val()
+               };
+                console.log(addObj);
+                post.push(addObj);
+                render(addObj);
+                
+                $('#title').val('');
+                $('#text').val('');
+                $('#subject').val('');
+                
+            });
+            
+            
+        });
+    </script>
+    
+    <style>
+        .addToDash{
+            padding: 1%;
+            width: 96;
+            border: 1px solid #000;
+        }
+        .adding_question{
+            
+            padding: 10px;
+            border: 1px solid #000;
+            margin-bottom: 10px;
+            text-align: center;
+            
+        }
+    </style>
+    
     
 </head>
 <body>
@@ -46,13 +100,32 @@
 <div class="container-fluid text-center" style="margin-top:50px;">    
   <div class="row content">
     <div class="bg col-sm-2 sidenav">
-    </div>
-    <div class="col-md-8 text-left"> 
+    </div> 
+    <div class="col-md-8 text-left" id=container> 
       <h1>Dashboard</h1>
-       <hr  style="height:1px;border:none;color:#333;background-color:#333;">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
-      
+       <hr  style="height:1px;border:none;color:#333;background-color:#333;"><hr>
+        
+        <div class="adding_question form-group">
+        <h4 id ="addQues">Add a Question</h4>
+        <form action="addingTask" method="post" id="addTask">
+            <label class="task-text"> Title: <input type="text" id="title" size = "10" class = "input-lg"></label>
+            <label class="task-text">Text: <input type="text" id="text" size = "55" class = "input-lg"></label>
+            <label class="task-text">Subject:<input type="text" id="subject" size = "10" class = "input-lg"></label>
+
+            <button id='addTo' class="btn btn-lg btn-info" type="button">ADD</button>
+        </form>
+
+            
+        </div>
+        
+        <div id='container'>
+        <div class="addToDash">
+            <a href="/taskPage"><h1 id="post_title">CCSCAL2 HELP</h1></a>
+            <h4 id="task_details">Homework due Thursday and I need help figuring out how to do the homework, either meet up or comment with attached picture of the homework</h4>
+        </div>
+        
+        </div>
+        
     </div>
     <div class="bg col-sm-2 sidenav">
     </div>

@@ -19,11 +19,67 @@
       <input type="text" class="form-control" name="firstname" placeholder="First Name" required="" autofocus="" style="margin-top:10px;" />
       <input type="text" class="form-control" name="lastname" placeholder="Last Name" required="" style="margin-top:10px;"/> 
       <input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" style="margin-top:10px;" />
-      <input type="password" class="form-control" name="password" placeholder="Password" required="" style="margin-top:10px;" />      
+      <input type="password" class="form-control" name="password" placeholder="Password" required="" style="margin-top:10px;" />   
+
+      <div class="container">
+    <div class="form-group">
+        <hr style="height:1px;border:none;color:#333;background-color:#333;">
+        <label style="margin-top:-5px;" id="ayuh">Upload Image</label>
+        <div class="input-group">
+            <span class="input-group-btn">
+                <span class="btn btn-outline-dark btn-file btn ">
+                    Browse… <input type="file" id="imgInp">
+                </span>
+            </span>
+            <input type="text" class="form-control" readonly>
+        </div>
+        <img id='img-upload'/>
+    </div>
+
+</div>   
       <a href="/dashboard"><button class="btn btn-lg btn-primary btn-block" style="margin-top:25px;" type="button">Sign Up</button></a>
     </form>
   </div>
       
+      <script type="text/javascript">
+        $(document).ready( function() {
+    	$(document).on('change', '.btn-file :file', function() {
+		var input = $(this),
+			label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+		input.trigger('fileselect', [label]);
+		});
+
+		$('.btn-file :file').on('fileselect', function(event, label) {
+		    
+		    var input = $(this).parents('.input-group').find(':text'),
+		        log = label;
+		    
+		    if( input.length ) {
+		        input.val(log);
+		    } else {
+		        if( log ) alert(log);
+		    }
+	    
+		});
+		function readURL(input) {
+		    if (input.files && input.files[0]) {
+		        var reader = new FileReader();
+		        
+		        reader.onload = function (e) {
+		            $('#img-upload').attr('src', e.target.result);
+		        }
+		        
+		        reader.readAsDataURL(input.files[0]);
+		    }
+		}
+
+		$("#imgInp").change(function(){
+		    readURL(this);
+		}); 	
+	});
+      </script>
+
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

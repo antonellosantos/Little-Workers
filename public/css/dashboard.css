@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:700&display=swap');
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
@@ -35,3 +36,15 @@
         background-repeat: no-repeat;
         background-size:cover;
     }
+
+    .task-text{
+      font-family: 'Exo', sans-serif;
+      font-size: 20px;
+
+
+     }
+     
+     #addQues{
+      font-family: 'Exo', sans-serif;
+      font-size: 24px; 
+     }

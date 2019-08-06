@@ -86,6 +86,14 @@ app.post("/checkingAccount", urlencoder,(req,res)=>{
 
 })
 
+app.post("/addingTask", urlencoder,(req,res)=>{
+
+})
+
+app.post("/editingProfile", urlencoder,(req,res)=>{
+
+})
+
 app.get("/profile", (req,res)=>{ //for testing purposes in order to view the page as you edit it
     res.render(__dirname + '/view/profilePage.hbs')
 })
